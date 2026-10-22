@@ -1,5 +1,16 @@
 # Histórico de mudanças
 
+## 0.1.4 alpha — Recursos no banner — 22/10/2026
+
+- Tipografia compacta em Segoe UI e saudação em Palatino Linotype, com hierarquia baseada na referência visual.
+- Banner principal reúne Energia Odyle, tempo no Abismo, Pesadelo, chaves do Shugo, Kinah, Pontos do Abismo, Rito de Ascensão, masmorra diária e chaves da Invasão.
+- Energia e entradas extras permanecem separadas dos valores normais. Capacidade premium depende da assinatura informada pelo jogo.
+- Moedas são lidas dos registros de inventário do personagem identificado. Kinah total, vinculado e livre são distinguidos; ausência de leitura não é interpretada como saldo zero.
+- Troca de personagem limpa a apresentação anterior; o histórico segue isolado por nome e servidor.
+- Leitura de moedas validada com testes de protocolo; conferência ao vivo dos saldos ainda pendente. Os campos aguardam dados até receber registros válidos.
+- Interface conferida nas larguras de 850, 1020 e 1400 pixels, nos dois perfis conhecidos e sem personagem conectado.
+- As sete atividades adiadas continuam ocultas.
+- 104 testes automatizados aprovados, incluindo saldos absolutos, associação ao personagem, limites de moeda e atualização do banner.
 ## 0.1.3 alpha — Rotina por personagem — 22/10/2026
 
 - Seção Sua rotina abaixo do banner, com seleção do personagem atual, outro personagem ou todos.
