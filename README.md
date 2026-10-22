@@ -1,10 +1,10 @@
 # Daeva Nexus
 
-O projeto foi refeito do zero e passa a se chamar **Daeva Nexus**. Esta é a nova base do aplicativo Windows, na versão 0.1.4 alpha.
+O projeto foi refeito do zero e passa a se chamar **Daeva Nexus**. Esta é a nova base do aplicativo Windows, na versão 0.1.9 alpha.
 
 O menu **Início** reúne o cartão do personagem (nome, classe, nível e retrato) e a seção **Sua rotina**, com atividades diárias, semanais e recursos separados por personagem.
 
-A rotina permite ver o personagem atual, selecionar outro já identificado ou exibir todos. **Não perca** destaca recursos cheios; **Falta fazer** mostra atividades com leitura disponível; **Dados indisponíveis** mantém visível o que ainda não pôde ser lido. Os dados ficam salvos neste PC, por nome e servidor, em `%LOCALAPPDATA%/DaevaNexus/activities.json`. Personagens desconectados mostram a última leitura, e valores vencidos após o reset aguardam nova confirmação do jogo.
+O seletor da barra superior permite consultar individualmente cada personagem já identificado. **Não perca** destaca recursos cheios; **Falta fazer** mostra atividades com leitura disponível; **Dados indisponíveis** mantém visível o que ainda não pôde ser lido. Os dados ficam salvos neste PC, por nome e servidor, em `%LOCALAPPDATA%/DaevaNexus/activities.json`. Personagens desconectados mostram a última leitura, e valores vencidos após o reset aguardam nova confirmação do jogo.
 
 Foram conferidos ao vivo Shugo (9 normais e 5 extras), Pesadelo (entradas normais e extras separadas), Rito de Ascensão, tempo no Abismo, a passagem de zero para uma Missão de Dever concluída e a compra de Energia de Od na Associação Brisa (20/20, com reset enviado pelo servidor). No teste, o contador da loja chegou após reabrir completamente o jogo; a seleção de personagens e a troca de abas não o reenviaram. Leituras de loja confirmadas são preservadas ao receber uma nova lista de entradas, até seu prazo de validade ou atualização explícita. A compra de Pedras da Fenda do Piso Inferior do Abismo (7D), na Associação Brisa, também foi validada ao vivo em 2/7, por personagem; essa oferta é temporária e tem reset informado pelo servidor. Os sete cartões de Kinah, presença, corredores, suprimentos e crafts ficam ocultos enquanto a leitura automática não é implementada; as definições foram preservadas para uma etapa futura. Não há preenchimento manual nem conclusão presumida. Os horários desta versão para América do Sul usam 04h de Brasília diariamente e quarta-feira para o reset semanal.
 
@@ -12,9 +12,14 @@ O banner principal também reúne Energia Odyle, tempo no Abismo, entradas de Pe
 
 O banner adapta nome, identificação, bordas e fundo à classe do personagem. Quando o serviço demora a entregar o retrato, há novas tentativas automáticas em 15, 30 e 60 segundos; depois o intervalo retorna a cinco minutos. A disponibilidade depende do serviço público. Uma atualização temporariamente sem imagem preserva o retrato do mesmo personagem, enquanto a troca de personagem limpa a imagem anterior.
 
+## Interface — 0.1.9 alpha
+
+A tela inicial mescla as duas propostas: banner com retrato grande, saudação serifada e detalhes na cor da classe, acompanhado de cartões de rotina com valores em destaque. A carteira ocupa uma região própria no banner, sem texto sobre o rosto. O painel de recursos permanece separado e mostra personagem e última leitura. Leituras pendentes e atividades concluídas podem ser expandidas. A atualização continua na barra inferior. O seletor de personagens na barra superior atualiza o banner, o retrato, a cor da classe, a carteira, os recursos e a rotina. Cada personagem aparece individualmente. Consultar outro perfil não altera a identidade usada para capturar dados do jogo.
+
+Esta versão reúne as melhorias de interface desenvolvidas após a 0.1.4. O código-fonte completo, com testes e instruções de compilação, está no arquivo `DaevaNexus-Source-0.1.9.zip` na [release 0.1.9](https://github.com/skkarhub/Aion2Dps/releases/tag/v0.1.9-alpha.1).
 ## Executar
 
-Baixe `DaevaNexus-Setup-0.1.4.exe` na seção Releases. O assistente permite escolher a pasta e criar um atalho na área de trabalho. O aplicativo aparece na lista de aplicativos instalados do Windows. O instalador é por usuário e não instala o Npcap automaticamente.
+Baixe `DaevaNexus-Setup-0.1.9.exe` na seção Releases. O assistente permite escolher a pasta e criar um atalho na área de trabalho. O aplicativo aparece na lista de aplicativos instalados do Windows. O instalador é por usuário e não instala o Npcap automaticamente.
 
 O app verifica atualizações ao abrir e a cada seis horas. Quando há uma versão nova, mostra um aviso e o botão **Atualizar**. Ao clicar, baixa o instalador, confere a assinatura do manifesto e o SHA-256 do arquivo, instala na pasta atual e reabre o aplicativo. O download pode ser cancelado. O perfil salvo é preservado, inclusive na desinstalação. As versões do antigo Aion2Dps são ignoradas.
 

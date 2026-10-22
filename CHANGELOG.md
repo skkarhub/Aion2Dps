@@ -1,5 +1,42 @@
 # Histórico de mudanças
 
+## 0.1.9 alpha — Seletor global e interface atualizada
+
+- Seletor de personagens na barra superior, sem a opção de todos os personagens.
+- Banner, retrato, classe, carteira, recursos e rotina acompanham a seleção, com proteção contra respostas atrasadas e cache limitado de perfis.
+- Barra de rolagem fina com cantos arredondados e destaque ao arrastar.
+
+## 0.1.8 alpha — Suavização das fontes — validação local
+
+- Renderização de texto padronizada em ClearType, métricas naturais e hinting estático.
+- Superfície principal opaca, com alinhamento de elementos à grade de pixels.
+- Recorte e máscara ficam restritos ao retrato, fora da camada de texto do banner.
+- Pequeno aumento dos menores rótulos e das descrições dos cartões para melhorar a leitura.
+- Preservados o layout, os cartões em grade e os dados do personagem.
+## 0.1.7 alpha — Cartões expandidos — validação local
+
+- Cartões de atividades concluídas ou sem entradas ficam lado a lado conforme a largura disponível.
+- Removidos o fundo e a borda externos dos grupos de cartões expandidos, incluindo leituras pendentes.
+- Mantidos os cartões individuais e o comportamento de expandir/recolher. Conferência em uma, duas e três colunas.
+## 0.1.6 alpha — Mescla visual — validação local
+
+- Banner com retrato grande, saudação serifada, degradê contínuo e detalhes na cor da classe.
+- Carteira permanece no banner, em região separada da imagem.
+- Cartões de atividades retornam com valores em destaque e cores de periodicidade; a quantidade de colunas acompanha a largura disponível.
+- Mantidos o painel separado de recursos, os detalhes expansíveis, o filtro da rotina e os controles de atualização no rodapé.
+- Menu lateral intermediário entre as duas propostas, com botão Início identificado.
+- Conferência visual em quatro larguras e cenários de dados ausentes, nomes longos e valores grandes; 105 testes aprovados.
+## 0.1.5 alpha — Reformulação UX/UI — validação local
+
+- Nova composição com navegação compacta, perfil separado e rotina como área principal.
+- Retrato em área exclusiva, sem informações sobrepostas. Nome e borda do retrato preservam a cor da classe.
+- Kinah e Pontos do Abismo junto ao perfil; energia e entradas em painel de recursos com identidade e última leitura visíveis.
+- Atividades em lista alinhada, com valores, personagem, periodicidade e prazo de reset.
+- Leituras pendentes e atividades concluídas ficam em grupos expansíveis, com foco de teclado visível.
+- Controles de atualização passam para a barra inferior da aplicação.
+- Tokens compartilhados de cores, superfícies e tipografia; carteira se reorganiza em janelas estreitas.
+- 105 testes aprovados. Renderizações em janela mínima, padrão e ampla; cenários sintéticos de nome longo, valores grandes, falta de retrato e expansão de detalhes.
+- Pesquisa e referências registradas na skill pessoal ux-ui-design e nas decisões de design locais. A pesquisa orienta a proposta; não representa estudo com usuários do Daeva Nexus.
 ## 0.1.4 alpha — Recursos no banner — 22/10/2026
 
 - Tipografia compacta em Segoe UI e saudação em Palatino Linotype, com hierarquia baseada na referência visual.
