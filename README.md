@@ -1,6 +1,6 @@
 # Daeva Nexus
 
-O projeto foi refeito do zero e passa a se chamar **Daeva Nexus**. Esta é a nova base do aplicativo Windows, na versão 0.1.9 alpha.
+O projeto foi refeito do zero e passa a se chamar **Daeva Nexus**. Esta é a nova base do aplicativo Windows, na versão 0.1.11 alpha.
 
 O menu **Início** reúne o cartão do personagem (nome, classe, nível e retrato) e a seção **Sua rotina**, com atividades diárias, semanais e recursos separados por personagem.
 
@@ -16,10 +16,10 @@ O banner adapta nome, identificação, bordas e fundo à classe do personagem. Q
 
 A tela inicial mescla as duas propostas: banner com retrato grande, saudação serifada e detalhes na cor da classe, acompanhado de cartões de rotina com valores em destaque. A carteira ocupa uma região própria no banner, sem texto sobre o rosto. O painel de recursos permanece separado e mostra personagem e última leitura. Leituras pendentes e atividades concluídas podem ser expandidas. A atualização continua na barra inferior. O seletor de personagens na barra superior atualiza o banner, o retrato, a cor da classe, a carteira, os recursos e a rotina. Cada personagem aparece individualmente. Consultar outro perfil não altera a identidade usada para capturar dados do jogo.
 
-Esta versão reúne as melhorias de interface desenvolvidas após a 0.1.4. O código-fonte completo, com testes e instruções de compilação, está no arquivo `DaevaNexus-Source-0.1.9.zip` na [release 0.1.9](https://github.com/skkarhub/Aion2Dps/releases/tag/v0.1.9-alpha.1).
+Esta versão reúne as melhorias de interface desenvolvidas após a 0.1.4. O código-fonte completo, com testes e instruções de compilação, está no arquivo `DaevaNexus-Source-0.1.11.zip` na [release 0.1.11](https://github.com/skkarhub/Aion2Dps/releases/tag/v0.1.11-alpha.1).
 ## Executar
 
-Baixe `DaevaNexus-Setup-0.1.9.exe` na seção Releases. O assistente permite escolher a pasta e criar um atalho na área de trabalho. O aplicativo aparece na lista de aplicativos instalados do Windows. O instalador é por usuário e não instala o Npcap automaticamente.
+Baixe `DaevaNexus-Setup-0.1.11.exe` na seção Releases. O assistente permite escolher a pasta e criar um atalho na área de trabalho. O aplicativo aparece na lista de aplicativos instalados do Windows. O instalador é por usuário e não instala o Npcap automaticamente.
 
 O app verifica atualizações ao abrir e a cada seis horas. Quando há uma versão nova, mostra um aviso e o botão **Atualizar**. Ao clicar, baixa o instalador, confere a assinatura do manifesto e o SHA-256 do arquivo, instala na pasta atual e reabre o aplicativo. O download pode ser cancelado. O perfil salvo é preservado, inclusive na desinstalação. As versões do antigo Aion2Dps são ignoradas.
 
@@ -52,3 +52,15 @@ Requer PowerShell 7 e o SDK indicado em `global.json`. Execute `./build.ps1` par
 O parâmetro opcional `--profile NOME SERVIDOR` permite inicializar o vínculo de um perfil previamente confirmado em desenvolvimento; nenhum personagem específico está embutido no código.
 
 O histórico desta reconstrução está em [CHANGELOG.md](CHANGELOG.md).
+
+## Configurações do medidor — 0.1.10 em validação local
+
+O segundo item do menu, **Medidor de dano**, abre **Combate**. Exibição está disponível; Atalhos aparece como próxima etapa. A tela permite configurar o tempo ocioso (20 s), manter lutas de chefe abertas (ligado), modo farm (ligado), pausa entre packs (10 s), modo de alvo (todos), apenas você e o grupo (ligado) e duração no boneco de treino (desligado). Os tempos editáveis aceitam inteiros entre 1 e 300 segundos. Os campos vazios ou inválidos são destacados e não substituem a última configuração salva.
+
+As preferências são globais para o aplicativo e ficam em `%LOCALAPPDATA%/DaevaNexus/combat-settings.json`, separadas da identidade e dos contadores de cada personagem. As alterações válidas são salvas automaticamente após uma pequena pausa e ao fechar. O motor de combate e o overlay de DPS/cura ainda não foram conectados nesta etapa; as opções descrevem o comportamento que será implementado.
+
+## Exibição do medidor — 0.1.11 alpha
+
+**Medidor de dano → Exibição** configura as barras e as janelas do futuro overlay. Padrões: eDPS, Combat Power ao lado do nome, dano total visível, DPS do grupo ligado, ocultar fora de combate após 15 s, timer de berserk ligado e resumo em uma linha. Nas janelas: fundo a 86%, foco desligado, botões Party/Todos e Grupo/DPS ocultos, nome da classe visível, nomes dos jogadores visíveis, escala de 90% e atualização a cada 150 ms.
+
+A opacidade permite 10–100%, escala 60–160%, atualização 50–500 ms e atraso para ocultar 1–300 s. eDPS considera a duração do encontro; aDPS considera o intervalo do primeiro ao último golpe de cada jogador. Exibir o botão Party/Todos não muda sozinho a opção de contar apenas você e o grupo. Os sliders aceitam teclado, as preferências são salvas automaticamente junto de Combate e os arquivos anteriores recebem padrões sem perder os valores existentes. Atalhos permanece para a próxima etapa. O overlay em tempo real ainda não está conectado.

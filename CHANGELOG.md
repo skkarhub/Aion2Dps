@@ -1,5 +1,20 @@
 # Histórico de mudanças
 
+## 0.1.11 alpha — Configurações de combate e exibição
+
+- Seção Exibição habilitada, com 16 preferências para barras e janelas de dano/cura.
+- Seleção eDPS/aDPS, Combat Power/Gear Score, formato do resumo, visibilidade, identificação dos jogadores e controles rápidos.
+- Ajustes de opacidade, escala, intervalo de atualização e atraso para ocultar, com validação e salvamento automático.
+- Arquivos de preferências anteriores mantêm os valores de Combate e recebem os padrões de Exibição.
+- Esta etapa prepara as preferências; o motor de DPS/cura ainda não está conectado.
+
+## 0.1.10 alpha — Configurações de combate — validação local
+
+- Novo item Medidor de dano com as seções Combate, Exibição e Atalhos; as duas últimas aguardam implementação.
+- Configuração de inatividade, pausa de chefe, modo farm, pausa entre packs, filtro de alvos, escopo do grupo e duração no boneco de treino.
+- Preferências globais salvas localmente, com validação, gravação atômica e preservação dos dados dos personagens.
+- Esta etapa configura o futuro overlay de DPS e cura; ainda não inicia medição em tempo real.
+
 ## 0.1.9 alpha — Seletor global e interface atualizada
 
 - Seletor de personagens na barra superior, sem a opção de todos os personagens.
