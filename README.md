@@ -1,6 +1,6 @@
 # Daeva Nexus
 
-O projeto foi refeito do zero e passa a se chamar **Daeva Nexus**. Esta é a nova base do aplicativo Windows, na versão 0.1.11 alpha.
+O projeto foi refeito do zero e passa a se chamar **Daeva Nexus**. A versão atual é **0.1.13 alpha**, com overlay de DPS e cura e Combat Power por consulta oficial.
 
 O menu **Início** reúne o cartão do personagem (nome, classe, nível e retrato) e a seção **Sua rotina**, com atividades diárias, semanais e recursos separados por personagem.
 
@@ -16,10 +16,10 @@ O banner adapta nome, identificação, bordas e fundo à classe do personagem. Q
 
 A tela inicial mescla as duas propostas: banner com retrato grande, saudação serifada e detalhes na cor da classe, acompanhado de cartões de rotina com valores em destaque. A carteira ocupa uma região própria no banner, sem texto sobre o rosto. O painel de recursos permanece separado e mostra personagem e última leitura. Leituras pendentes e atividades concluídas podem ser expandidas. A atualização continua na barra inferior. O seletor de personagens na barra superior atualiza o banner, o retrato, a cor da classe, a carteira, os recursos e a rotina. Cada personagem aparece individualmente. Consultar outro perfil não altera a identidade usada para capturar dados do jogo.
 
-Esta versão reúne as melhorias de interface desenvolvidas após a 0.1.4. O código-fonte completo, com testes e instruções de compilação, está no arquivo `DaevaNexus-Source-0.1.11.zip` na [release 0.1.11](https://github.com/skkarhub/Aion2Dps/releases/tag/v0.1.11-alpha.1).
+Esta versão reúne as melhorias de interface desenvolvidas após a 0.1.4. O código-fonte completo, com testes e instruções de compilação, está no arquivo `DaevaNexus-Source-0.1.13.zip` na [release 0.1.13](https://github.com/skkarhub/Aion2Dps/releases/tag/v0.1.13-alpha.1).
 ## Executar
 
-Baixe `DaevaNexus-Setup-0.1.11.exe` na seção Releases. O assistente permite escolher a pasta e criar um atalho na área de trabalho. O aplicativo aparece na lista de aplicativos instalados do Windows. O instalador é por usuário e não instala o Npcap automaticamente.
+Baixe `DaevaNexus-Setup-0.1.13.exe` na seção Releases. O assistente permite escolher a pasta e criar um atalho na área de trabalho. O aplicativo aparece na lista de aplicativos instalados do Windows. O instalador é por usuário e não instala o Npcap automaticamente.
 
 O app verifica atualizações ao abrir e a cada seis horas. Quando há uma versão nova, mostra um aviso e o botão **Atualizar**. Ao clicar, baixa o instalador, confere a assinatura do manifesto e o SHA-256 do arquivo, instala na pasta atual e reabre o aplicativo. O download pode ser cancelado. O perfil salvo é preservado, inclusive na desinstalação. As versões do antigo Aion2Dps são ignoradas.
 
@@ -64,3 +64,13 @@ As preferências são globais para o aplicativo e ficam em `%LOCALAPPDATA%/Daeva
 **Medidor de dano → Exibição** configura as barras e as janelas do futuro overlay. Padrões: eDPS, Combat Power ao lado do nome, dano total visível, DPS do grupo ligado, ocultar fora de combate após 15 s, timer de berserk ligado e resumo em uma linha. Nas janelas: fundo a 86%, foco desligado, botões Party/Todos e Grupo/DPS ocultos, nome da classe visível, nomes dos jogadores visíveis, escala de 90% e atualização a cada 150 ms.
 
 A opacidade permite 10–100%, escala 60–160%, atualização 50–500 ms e atraso para ocultar 1–300 s. eDPS considera a duração do encontro; aDPS considera o intervalo do primeiro ao último golpe de cada jogador. Exibir o botão Party/Todos não muda sozinho a opção de contar apenas você e o grupo. Os sliders aceitam teclado, as preferências são salvas automaticamente junto de Combate e os arquivos anteriores recebem padrões sem perder os valores existentes. Atalhos permanece para a próxima etapa. O overlay em tempo real ainda não está conectado.
+
+## Overlay de DPS e cura — 0.1.12 em validação local
+
+O overlay é uma janela independente, visível sobre o jogo mesmo com a janela principal minimizada. Alterne entre **DPS** e **Cura** no cabeçalho. Cada personagem mostra taxa, total e participação; invocações só são creditadas quando o jogo identifica o dono. A leitura usa o Npcap existente e as conexões pertencentes ao AION2.exe. Nenhum comando é enviado ao jogo e nenhum pacote bruto é gravado. A identificação para o combate vem da captura, não do personagem selecionado no Início.
+
+No menu Medidor de dano, **Mostrar overlay** o revela temporariamente, **Editar overlay** remove o travamento e **Reposicionar** recupera uma janela fora de vista. Arraste o título para mover e o canto para redimensionar; **Travar** deixa os cliques passarem ao jogo. O X do overlay só o oculta; fechar o aplicativo principal encerra ambas as janelas. O travamento não é restaurado na abertura, para manter a recuperação acessível. Posição, tamanho e visibilidade ficam em `overlay-placement.json`, sem nomes ou dados de combate.
+
+Combate aplica inatividade, pausas de chefe, farm, filtros de alvo/grupo e duração de treino. O resultado do treino permanece congelado no limite escolhido, até uma pausa real ou Zerar. Exibição aplica eDPS/aDPS, colunas, soma do grupo, ocultação, foco, resumo, controles rápidos, privacidade, opacidade, escala e intervalo. A ocultação automática volta no próximo evento aceito; Mostrar/Editar revela por dez segundos. Os botões opcionais mudam explicitamente o escopo ou a lista do grupo. Valores não recebidos de GS/CP aparecem como “—”. Desde a 0.1.13, CP vem da consulta oficial por nome e servidor para identidades locais e do grupo confirmadas na captura. É consultado em segundo plano a cada cinco minutos, com recuo após falhas e expiração em dez minutos; pode diferir temporariamente do jogo. A consulta não altera os totais de combate nem concede participação no grupo. O timer de berserk exige prazo confirmado e ainda não possui leitor validado nesta versão; não é inventado a partir de um prazo padrão.
+
+O diagnóstico ao vivo recebeu dano e cura separados de um personagem local no espantalho. A leitura de aliados foi testada com mensagens controladas; falta comparação ao vivo em party. Mensagens de grupo incompletas ou homônimos sem servidor não autorizam personagens próximos. Entre no personagem com o app aberto para receber identidade e grupo; o jogo pode não reenviar esses registros ao abrir o app no meio da sessão. A cura representa os valores observados no tráfego, sem afirmar separação de overheal. A janela sobre tela cheia exclusiva e todos os cenários de múltiplos monitores ainda precisam de conferência no ambiente de uso.

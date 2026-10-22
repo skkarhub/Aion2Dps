@@ -1,5 +1,22 @@
 # Histórico de mudanças
 
+## 0.1.13 alpha — Overlay de DPS/cura e Combat Power
+
+- Combat Power conectado à consulta oficial por nome e servidor, sem baixar retratos e sem interromper a captura de DPS/cura.
+- Consultas sequenciais, cache de cinco minutos, novas tentativas após falhas e expiração de leituras antigas. Somente identidades confirmadas do personagem local e do grupo são consultadas.
+- Tooltip informa a origem e o possível atraso do CP em relação ao jogo. Gear Score e prazo de berserk continuam sem leitor validado.
+- Consulta real do Skkar retornou 116.528, compatível com 116,5 mil informado no jogo.
+- DPS, cura e exibição do CP confirmados pelo usuário na instalação local. 162 testes automatizados aprovados. Leitura de aliados ainda aguarda validação ao vivo em party.
+
+## 0.1.12 alpha — Overlay de dano e cura — validação local
+
+- Overlay independente com modos de DPS e cura, ranking, totais, participação e duração.
+- Eventos diretos e periódicos lidos na mesma captura passiva da identificação e das atividades.
+- Contagem por identidade/servidor, grupo confirmado e dono explícito de invocações, com limites de memória e recuperação após perda de dados.
+- Preferências de combate e exibição aplicadas ao vivo.
+- Mover, redimensionar, travar para passar cliques, editar, mostrar/ocultar e reposicionar; posição e tamanho salvos localmente.
+- GS/CP permanecem indisponíveis até leitura validada. Berserk só é mostrado com prazo explícito confirmado; ainda não há leitor desse prazo nesta versão.
+
 ## 0.1.11 alpha — Configurações de combate e exibição
 
 - Seção Exibição habilitada, com 16 preferências para barras e janelas de dano/cura.
