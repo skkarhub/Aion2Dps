@@ -1,5 +1,15 @@
 # Histórico de mudanças
 
+## 0.1.20 alpha — Confiabilidade da leitura de combate
+
+- Leitura estrutural e limitada das mensagens de party/aliança, incluindo lista completa, entrada, reconexão, troca de líder, saída e dissolução. Lista do recrutador não concede participação no grupo.
+- Identidade vinculada ao servidor de origem; integrantes sem ID disponível continuam listados sem autorizar dano de personagens próximos.
+- Mudança de mapa invalida IDs temporários e preserva o resultado encerrado. Mensagens incompletas não provocam um reset presumido.
+- Uma conexão identificada alimenta o combate; dados e falhas de conexões anteriores não encerram a sessão nova. Listas de grupo anteriores à identificação são mantidas apenas em forma decodificada, com limites e validade.
+- Saída do grupo interrompe novos créditos sem remover o dano já aceito. Atualizações de grupo antigas e IDs reutilizados não transferem resultados entre personagens.
+- Contrato de contribuições aceitas preparado para habilidades e histórico, com origem direta/periódica e dono da invocação resolvido, sem gerar estatísticas ainda não lidas.
+- 205 testes aprovados e verificações WPF de Módulos e overlay. Diagnóstico solo recebeu 47 contribuições de dano (490.956), identificação e transição de mapa, sem erro de leitura no intervalo observado. Validação ao vivo da party/aliança permanece pendente.
+
 ## 0.1.19 alpha — Módulos, configurações e overlay
 
 ### Overlay

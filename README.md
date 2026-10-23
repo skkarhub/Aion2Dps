@@ -1,6 +1,6 @@
 # Daeva Nexus
 
-O projeto foi refeito do zero e passa a se chamar **Daeva Nexus**. A versão atual é **0.1.19 alpha**, com Módulos e configurações reorganizados e overlay redesenhado em cinza chumbo e azul. Inclui tela inicial com recursos compactos e rotina em linhas, ícones de classe e Combat Power no overlay.
+O projeto foi refeito do zero e passa a se chamar **Daeva Nexus**. A versão atual é **0.1.20 alpha**, com melhorias de confiabilidade na leitura de combate, party, reconexão e troca de mapa. Mantém Módulos, configurações e overlay em cinza chumbo e azul. Inclui tela inicial com recursos compactos e rotina em linhas, ícones de classe e Combat Power no overlay.
 
 O menu **Início** reúne o cartão do personagem (nome, classe, nível e retrato) e a seção **Sua rotina**, com atividades diárias, semanais e recursos separados por personagem.
 
@@ -12,14 +12,22 @@ O banner principal também reúne Energia Odyle, tempo no Abismo, entradas de Pe
 
 O banner adapta nome, identificação, bordas e fundo à classe do personagem. Quando o serviço demora a entregar o retrato, há novas tentativas automáticas em 15, 30 e 60 segundos; depois o intervalo retorna a cinco minutos. A disponibilidade depende do serviço público. Uma atualização temporariamente sem imagem preserva o retrato do mesmo personagem, enquanto a troca de personagem limpa a imagem anterior.
 
-## Interface — 0.1.19 alpha
+## Leitura de combate — 0.1.20 alpha
+
+A lista do recrutador não autoriza personagens como integrantes da party. Mensagens completas de party/aliança identificam os membros pelo servidor de origem; entradas, reconexões, liderança, saída e dissolução são tratadas separadamente. Um integrante sem ID disponível continua listado, sem atribuir dano de jogadores próximos. Ao sair do grupo, deixa de receber novos créditos, mas seu dano já aceito permanece no resultado da luta.
+
+Mudanças de mapa invalidam os IDs temporários e preservam o resultado encerrado. Pacotes incompletos não provocam um reset presumido. Dados e falhas de conexões anteriores não encerram o combate da conexão atual identificada. Falhas de captura exigem nova identificação e confirmação do grupo.
+
+205 testes automatizados aprovados, além de verificações WPF de Módulos e overlay. No diagnóstico solo foram recebidos 47 eventos de dano, somando 490.956, com identificação e transição de mapa, sem erro de leitura no intervalo observado. A comparação ao vivo dos aliados e de alianças continua pendente. Esta versão prepara os eventos necessários às futuras telas de habilidades e histórico; essas telas ainda não foram implementadas.
+
+## Interface — 0.1.20 alpha
 
 A tela inicial usa Segoe UI e superfícies cinza neutras. O banner reúne nome, ícone e cor da classe, nível, servidor, retrato e carteira, com adaptação à largura da janela. Energia Odyle, tempo no Abismo e chaves do Shugo ficam em uma faixa de consulta rápida. Os demais recursos continuam disponíveis em Outros recursos. A rotina aparece em linhas alinhadas, com filtros Tudo, Diário e Semanal que afetam apenas essa lista. Leituras pendentes e atividades concluídas podem ser expandidas. A atualização continua na barra inferior. O seletor superior atualiza individualmente todos os dados apresentados do personagem; consultar outro perfil não altera a identidade usada para capturar dados do jogo. Saldos normais e bônus permanecem separados, e dados ausentes não são tratados como zero.
 
-Módulos apresenta apenas as duas funções existentes, com estado explícito e ações Abrir/Configurações. Combate e Exibição organizam as opções em grupos; os editores passam para baixo das descrições em janelas estreitas. O overlay mantém nome e CP/GS na mesma linha, ícone e classe próximos, valores alinhados e barras finas nas cores de classe. Em larguras menores, os valores passam para uma segunda linha. Escala, opacidade, foco, privacidade e leitura parcial permanecem disponíveis. Os 169 testes passaram, junto das verificações WPF de controles, modos, módulos e redimensionamento; não houve nova validação ao vivo em party nesta alteração. Esta versão reúne as melhorias de interface desenvolvidas após a 0.1.4. O código-fonte completo, com testes e instruções de compilação, está no arquivo `DaevaNexus-Source-0.1.19.zip` na [release 0.1.19](https://github.com/skkarhub/Aion2Dps/releases/tag/v0.1.19-alpha.1).
+Módulos apresenta apenas as duas funções existentes, com estado explícito e ações Abrir/Configurações. Combate e Exibição organizam as opções em grupos; os editores passam para baixo das descrições em janelas estreitas. O overlay mantém nome e CP/GS na mesma linha, ícone e classe próximos, valores alinhados e barras finas nas cores de classe. Em larguras menores, os valores passam para uma segunda linha. Escala, opacidade, foco, privacidade e leitura parcial permanecem disponíveis. Os 205 testes passaram, junto das verificações WPF de controles, modos, módulos e redimensionamento; não houve nova validação ao vivo em party nesta alteração. Esta versão reúne as melhorias de interface desenvolvidas após a 0.1.4. O código-fonte completo, com testes e instruções de compilação, está no arquivo `DaevaNexus-Source-0.1.20.zip` na [release 0.1.20](https://github.com/skkarhub/Aion2Dps/releases/tag/v0.1.20-alpha.1).
 ## Executar
 
-Baixe `DaevaNexus-Setup-0.1.19.exe` na seção Releases. O assistente permite escolher a pasta e criar um atalho na área de trabalho. O aplicativo aparece na lista de aplicativos instalados do Windows. O instalador é por usuário e não instala o Npcap automaticamente.
+Baixe `DaevaNexus-Setup-0.1.20.exe` na seção Releases. O assistente permite escolher a pasta e criar um atalho na área de trabalho. O aplicativo aparece na lista de aplicativos instalados do Windows. O instalador é por usuário e não instala o Npcap automaticamente.
 
 O app verifica atualizações ao abrir e a cada seis horas. Quando há uma versão nova, mostra um aviso e o botão **Atualizar**. Ao clicar, baixa o instalador, confere a assinatura do manifesto e o SHA-256 do arquivo, instala na pasta atual e reabre o aplicativo. O download pode ser cancelado. O perfil salvo é preservado, inclusive na desinstalação. As versões do antigo Aion2Dps são ignoradas.
 
