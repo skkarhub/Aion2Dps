@@ -1,6 +1,6 @@
 # Daeva Nexus
 
-O projeto foi refeito do zero e passa a se chamar **Daeva Nexus**. A versão atual é **0.1.13 alpha**, com overlay de DPS e cura e Combat Power por consulta oficial.
+O projeto foi refeito do zero e passa a se chamar **Daeva Nexus**. A versão atual é **0.1.15 alpha**, com tema cinza chumbo e azul, ícones de classe no overlay, DPS e cura e Combat Power por consulta oficial.
 
 O menu **Início** reúne o cartão do personagem (nome, classe, nível e retrato) e a seção **Sua rotina**, com atividades diárias, semanais e recursos separados por personagem.
 
@@ -16,10 +16,10 @@ O banner adapta nome, identificação, bordas e fundo à classe do personagem. Q
 
 A tela inicial mescla as duas propostas: banner com retrato grande, saudação serifada e detalhes na cor da classe, acompanhado de cartões de rotina com valores em destaque. A carteira ocupa uma região própria no banner, sem texto sobre o rosto. O painel de recursos permanece separado e mostra personagem e última leitura. Leituras pendentes e atividades concluídas podem ser expandidas. A atualização continua na barra inferior. O seletor de personagens na barra superior atualiza o banner, o retrato, a cor da classe, a carteira, os recursos e a rotina. Cada personagem aparece individualmente. Consultar outro perfil não altera a identidade usada para capturar dados do jogo.
 
-Esta versão reúne as melhorias de interface desenvolvidas após a 0.1.4. O código-fonte completo, com testes e instruções de compilação, está no arquivo `DaevaNexus-Source-0.1.13.zip` na [release 0.1.13](https://github.com/skkarhub/Aion2Dps/releases/tag/v0.1.13-alpha.1).
+Esta versão reúne as melhorias de interface desenvolvidas após a 0.1.4. O código-fonte completo, com testes e instruções de compilação, está no arquivo `DaevaNexus-Source-0.1.15.zip` na [release 0.1.15](https://github.com/skkarhub/Aion2Dps/releases/tag/v0.1.15-alpha.1).
 ## Executar
 
-Baixe `DaevaNexus-Setup-0.1.13.exe` na seção Releases. O assistente permite escolher a pasta e criar um atalho na área de trabalho. O aplicativo aparece na lista de aplicativos instalados do Windows. O instalador é por usuário e não instala o Npcap automaticamente.
+Baixe `DaevaNexus-Setup-0.1.15.exe` na seção Releases. O assistente permite escolher a pasta e criar um atalho na área de trabalho. O aplicativo aparece na lista de aplicativos instalados do Windows. O instalador é por usuário e não instala o Npcap automaticamente.
 
 O app verifica atualizações ao abrir e a cada seis horas. Quando há uma versão nova, mostra um aviso e o botão **Atualizar**. Ao clicar, baixa o instalador, confere a assinatura do manifesto e o SHA-256 do arquivo, instala na pasta atual e reabre o aplicativo. O download pode ser cancelado. O perfil salvo é preservado, inclusive na desinstalação. As versões do antigo Aion2Dps são ignoradas.
 

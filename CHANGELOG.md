@@ -1,5 +1,18 @@
 # Histórico de mudanças
 
+## 0.1.15 alpha — Tema cinza chumbo e azul
+
+- Fundos cinza chumbo e superfícies neutras em Início, menu lateral, barra superior, configurações, cartões e overlay.
+- Azul nas seleções, controles, botões, foco e indicadores; cores de classe preservadas nos dados do personagem e nas barras.
+- Tipografia sem serifa consistente nos títulos, bordas mais discretas e degradês suaves nos painéis.
+- Navegação, controles, escala, leitura de combate e preferências mantidos.
+
+## 0.1.14 alpha — Ícones de classe no overlay — validação local
+
+- Emblemas das classes substituem as iniciais nas linhas de DPS, cura e grupo.
+- Imagens incluídas no aplicativo e carregadas uma única vez, sem requisições durante o combate.
+- Nome da classe disponível no tooltip e para acessibilidade; classe ainda desconhecida usa uma silhueta neutra.
+
 ## 0.1.13 alpha — Overlay de DPS/cura e Combat Power
 
 - Combat Power conectado à consulta oficial por nome e servidor, sem baixar retratos e sem interromper a captura de DPS/cura.
