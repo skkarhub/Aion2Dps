@@ -1,5 +1,14 @@
 # Histórico de mudanças
 
+## 0.1.16 alpha — Tela Módulos
+
+- Novo item Módulos com cartões de Medidor de dano e Rotina do personagem, sem funções ainda não implementadas.
+- Chaves globais com salvamento automático em modules.json. Desligar não apaga dados ou configurações.
+- Medidor desligado interrompe contagem, suspende novas consultas de CP e oculta o overlay. Reativar começa uma nova medição usando a identificação disponível.
+- Rotina desligada não recebe novas observações de atividades e oculta os cartões, os recursos e os saldos do banner. Identificação básica e perfil continuam disponíveis.
+- Ações Abrir e Configurações conectadas às telas existentes. Menu e botões respeitam módulos desligados.
+- Regra de integrar futuras funções independentes à tela Módulos documentada em AGENTS.md e incluída no pacote fonte.
+
 ## 0.1.15 alpha — Tema cinza chumbo e azul
 
 - Fundos cinza chumbo e superfícies neutras em Início, menu lateral, barra superior, configurações, cartões e overlay.
