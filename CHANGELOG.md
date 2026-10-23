@@ -1,5 +1,13 @@
 # Histórico de mudanças
 
+## 0.1.22 alpha — Rotina sempre ativa e navegação do medidor
+
+- Rotina, recursos e saldos do personagem ficam sempre ativos e saem da tela Módulos. A preferência antiga Routine é ignorada, preservando as atividades e a escolha do Medidor de dano.
+- 216 testes aprovados, incluindo compatibilidade dos arquivos antigos com rotina desativada e persistência da preferência do medidor. Conferida a atualização da rotina e dos saldos com o medidor desligado.
+- Análise, Combate, Exibição e a indicação de Atalhos em breve passam para abas horizontais dentro da área do Medidor de dano.
+- Barra lateral mantém apenas os acessos principais; seleção da seção, entrada por Módulos e abertura da análise pelo overlay preservadas.
+- Navegação, controles e salvamento conferidos nas verificações WPF de Análise, Combate e Exibição, com renders em janela mínima, padrão, larga e raster de 150%.
+
 ## 0.1.21 alpha — Análise de combate (F02)
 
 - Tela Análise dentro do Medidor de dano: participante selecionado, resumo do encontro e alternância entre dano e cura. A seleção inicial usa o personagem capturado, separada do seletor do Início.
