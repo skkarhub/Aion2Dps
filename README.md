@@ -1,6 +1,6 @@
 # Daeva Nexus
 
-O projeto foi refeito do zero e passa a se chamar **Daeva Nexus**. A versão atual é **0.1.22 alpha**, com rotina sempre ativa e abas de Análise, Combate e Exibição dentro do Medidor de dano. Mantém Módulos, configurações e overlay em cinza chumbo e azul. Inclui tela inicial com recursos compactos e rotina em linhas, ícones de classe e Combat Power no overlay.
+O projeto foi refeito do zero e passa a se chamar **Daeva Nexus**. A versão atual é **0.1.23 alpha**, com Eventos e notificações, rotina sempre ativa e abas de Análise, Combate e Exibição dentro do Medidor de dano. Mantém Módulos, configurações e overlay em cinza chumbo e azul. Inclui tela inicial com recursos compactos e rotina em linhas, ícones de classe e Combat Power no overlay.
 
 O menu **Início** reúne o cartão do personagem (nome, classe, nível e retrato) e a seção **Sua rotina**, com atividades diárias, semanais e recursos separados por personagem.
 
@@ -27,7 +27,15 @@ A tela inicial usa Segoe UI e superfícies cinza neutras. O banner reúne nome, 
 Módulos apresenta o Medidor de dano como função opcional, com estado explícito e ações Abrir/Configurações. Rotina, recursos e saldos do personagem permanecem sempre ativos, mesmo com o medidor desativado. A preferência antiga que desligava a rotina é ignorada sem apagar os dados anteriores. Combate e Exibição organizam as opções em grupos; os editores passam para baixo das descrições em janelas estreitas. O overlay mantém nome e CP/GS na mesma linha, ícone e classe próximos, valores alinhados e barras finas nas cores de classe. Em larguras menores, os valores passam para uma segunda linha. Escala, opacidade, foco, privacidade e leitura parcial permanecem disponíveis. Os 205 testes passaram, junto das verificações WPF de controles, modos, módulos e redimensionamento; não houve nova validação ao vivo em party nesta alteração. Esta versão reúne as melhorias de interface desenvolvidas após a 0.1.4. O código-fonte completo, com testes e instruções de compilação, está no arquivo `DaevaNexus-Source-0.1.22.zip` na [release 0.1.22](https://github.com/skkarhub/Aion2Dps/releases/tag/v0.1.22-alpha.1).
 ## Executar
 
-Baixe `DaevaNexus-Setup-0.1.22.exe` na seção Releases. O assistente permite escolher a pasta e criar um atalho na área de trabalho. O aplicativo aparece na lista de aplicativos instalados do Windows. O instalador é por usuário e não instala o Npcap automaticamente.
+### Eventos e notificações (F07)
+
+Esta versão acrescenta Eventos a Módulos, com agenda prevista da América do Sul, próximos horários em Brasília e contagem regressiva para Festival Shugo, Invasão Dimensional, Fenda do Espaço-Tempo e resets diário/semanal. Permite escolher eventos, antecedência, avisos Windows, janela sobreposta e som opcional, além de testar o aviso. Desativar Eventos interrompe seu timer e oculta avisos sem afetar rotina ou medidor. O aplicativo deve permanecer aberto ou minimizado.
+
+Os horários são calculados a partir de um catálogo embarcado, sem cadastro manual e sem confirmação ao vivo de ocorrência. Manutenções podem alterar a agenda. Preferências e prevenção de repetição ficam em `%LOCALAPPDATA%/DaevaNexus/events.json`; um arquivo inválido pausa os avisos até recuperação explícita. 234 testes e verificações WPF aprovados. Fontes, comparação aproximada da Fenda e limites estão em `docs/events-research.json` e `docs/events-validation.json`. O instalador e o código-fonte completo desta versão estão na [release 0.1.23](https://github.com/skkarhub/Aion2Dps/releases/tag/v0.1.23-alpha.1).
+
+### Versão publicada
+
+Baixe `DaevaNexus-Setup-0.1.23.exe` na seção Releases. O assistente permite escolher a pasta e criar um atalho na área de trabalho. O aplicativo aparece na lista de aplicativos instalados do Windows. O instalador é por usuário e não instala o Npcap automaticamente.
 
 O app verifica atualizações ao abrir e a cada seis horas. Quando há uma versão nova, mostra um aviso e o botão **Atualizar**. Ao clicar, baixa o instalador, confere a assinatura do manifesto e o SHA-256 do arquivo, instala na pasta atual e reabre o aplicativo. O download pode ser cancelado. O perfil salvo é preservado, inclusive na desinstalação. As versões do antigo Aion2Dps são ignoradas.
 

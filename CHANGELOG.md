@@ -1,5 +1,13 @@
 # Histórico de mudanças
 
+## 0.1.23 alpha — Eventos e notificações (F07)
+
+- Tela Eventos com agenda prevista da América do Sul: Festival Shugo, Invasão Dimensional, Fenda do Espaço-Tempo e resets diário/semanal. Próximos horários em Brasília e contagem automática, sem cadastro manual.
+- Seleção por evento, antecedência, aviso Windows, janela sobreposta, som opcional e botão de teste. Preferências e prevenção de avisos repetidos persistidas com escrita atômica e recuperação explícita em caso de corrupção.
+- Eventos integrado a Módulos: desligar interrompe o timer e oculta avisos, preservando preferências. Rotina e medidor continuam independentes.
+- 234 testes aprovados e verificações WPF de Eventos, Módulos e Análise sem erros de binding. Envio nativo aceito pelo Windows; apresentação depende das configurações do sistema. Uma contagem aproximada da Fenda foi comparada com o jogo; demais horários permanecem previstos.
+- Fontes e limites documentados em docs/events-research.json e docs/events-validation.json. Horários previstos, sem presumir ocorrência ao vivo.
+
 ## 0.1.22 alpha — Rotina sempre ativa e navegação do medidor
 
 - Rotina, recursos e saldos do personagem ficam sempre ativos e saem da tela Módulos. A preferência antiga Routine é ignorada, preservando as atividades e a escolha do Medidor de dano.
