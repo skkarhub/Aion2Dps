@@ -1,6 +1,6 @@
-﻿# Daeva Nexus
+# Daeva Nexus
 
-O projeto foi refeito do zero e passa a se chamar **Daeva Nexus**. A versão atual é **0.1.18 alpha**, com nova tela inicial, banner do personagem, recursos compactos e rotina em linhas com filtros Tudo, Diário e Semanal. Inclui tela Módulos, tema cinza chumbo e azul e overlay de DPS/cura com ícones de classe e Combat Power.
+O projeto foi refeito do zero e passa a se chamar **Daeva Nexus**. A versão atual é **0.1.19 alpha**, com Módulos e configurações reorganizados e overlay redesenhado em cinza chumbo e azul. Inclui tela inicial com recursos compactos e rotina em linhas, ícones de classe e Combat Power no overlay.
 
 O menu **Início** reúne o cartão do personagem (nome, classe, nível e retrato) e a seção **Sua rotina**, com atividades diárias, semanais e recursos separados por personagem.
 
@@ -12,14 +12,14 @@ O banner principal também reúne Energia Odyle, tempo no Abismo, entradas de Pe
 
 O banner adapta nome, identificação, bordas e fundo à classe do personagem. Quando o serviço demora a entregar o retrato, há novas tentativas automáticas em 15, 30 e 60 segundos; depois o intervalo retorna a cinco minutos. A disponibilidade depende do serviço público. Uma atualização temporariamente sem imagem preserva o retrato do mesmo personagem, enquanto a troca de personagem limpa a imagem anterior.
 
-## Interface — 0.1.18 alpha
+## Interface — 0.1.19 alpha
 
 A tela inicial usa Segoe UI e superfícies cinza neutras. O banner reúne nome, ícone e cor da classe, nível, servidor, retrato e carteira, com adaptação à largura da janela. Energia Odyle, tempo no Abismo e chaves do Shugo ficam em uma faixa de consulta rápida. Os demais recursos continuam disponíveis em Outros recursos. A rotina aparece em linhas alinhadas, com filtros Tudo, Diário e Semanal que afetam apenas essa lista. Leituras pendentes e atividades concluídas podem ser expandidas. A atualização continua na barra inferior. O seletor superior atualiza individualmente todos os dados apresentados do personagem; consultar outro perfil não altera a identidade usada para capturar dados do jogo. Saldos normais e bônus permanecem separados, e dados ausentes não são tratados como zero.
 
-Esta versão reúne as melhorias de interface desenvolvidas após a 0.1.4. O código-fonte completo, com testes e instruções de compilação, está no arquivo `DaevaNexus-Source-0.1.18.zip` na [release 0.1.18](https://github.com/skkarhub/Aion2Dps/releases/tag/v0.1.18-alpha.1).
+Módulos apresenta apenas as duas funções existentes, com estado explícito e ações Abrir/Configurações. Combate e Exibição organizam as opções em grupos; os editores passam para baixo das descrições em janelas estreitas. O overlay mantém nome e CP/GS na mesma linha, ícone e classe próximos, valores alinhados e barras finas nas cores de classe. Em larguras menores, os valores passam para uma segunda linha. Escala, opacidade, foco, privacidade e leitura parcial permanecem disponíveis. Os 169 testes passaram, junto das verificações WPF de controles, modos, módulos e redimensionamento; não houve nova validação ao vivo em party nesta alteração. Esta versão reúne as melhorias de interface desenvolvidas após a 0.1.4. O código-fonte completo, com testes e instruções de compilação, está no arquivo `DaevaNexus-Source-0.1.19.zip` na [release 0.1.19](https://github.com/skkarhub/Aion2Dps/releases/tag/v0.1.19-alpha.1).
 ## Executar
 
-Baixe `DaevaNexus-Setup-0.1.18.exe` na seção Releases. O assistente permite escolher a pasta e criar um atalho na área de trabalho. O aplicativo aparece na lista de aplicativos instalados do Windows. O instalador é por usuário e não instala o Npcap automaticamente.
+Baixe `DaevaNexus-Setup-0.1.19.exe` na seção Releases. O assistente permite escolher a pasta e criar um atalho na área de trabalho. O aplicativo aparece na lista de aplicativos instalados do Windows. O instalador é por usuário e não instala o Npcap automaticamente.
 
 O app verifica atualizações ao abrir e a cada seis horas. Quando há uma versão nova, mostra um aviso e o botão **Atualizar**. Ao clicar, baixa o instalador, confere a assinatura do manifesto e o SHA-256 do arquivo, instala na pasta atual e reabre o aplicativo. O download pode ser cancelado. O perfil salvo é preservado, inclusive na desinstalação. As versões do antigo Aion2Dps são ignoradas.
 
@@ -53,19 +53,19 @@ O parâmetro opcional `--profile NOME SERVIDOR` permite inicializar o vínculo d
 
 O histórico desta reconstrução está em [CHANGELOG.md](CHANGELOG.md).
 
-## Configurações do medidor — 0.1.10 em validação local
+## Configurações do medidor
 
 O segundo item do menu, **Medidor de dano**, abre **Combate**. Exibição está disponível; Atalhos aparece como próxima etapa. A tela permite configurar o tempo ocioso (20 s), manter lutas de chefe abertas (ligado), modo farm (ligado), pausa entre packs (10 s), modo de alvo (todos), apenas você e o grupo (ligado) e duração no boneco de treino (desligado). Os tempos editáveis aceitam inteiros entre 1 e 300 segundos. Os campos vazios ou inválidos são destacados e não substituem a última configuração salva.
 
-As preferências são globais para o aplicativo e ficam em `%LOCALAPPDATA%/DaevaNexus/combat-settings.json`, separadas da identidade e dos contadores de cada personagem. As alterações válidas são salvas automaticamente após uma pequena pausa e ao fechar. O motor de combate e o overlay de DPS/cura ainda não foram conectados nesta etapa; as opções descrevem o comportamento que será implementado.
+As preferências são globais para o aplicativo e ficam em `%LOCALAPPDATA%/DaevaNexus/combat-settings.json`, separadas da identidade e dos contadores de cada personagem. As alterações válidas são salvas automaticamente após uma pequena pausa e ao fechar. As opções são aplicadas ao motor de combate e ao overlay conectado descritos abaixo.
 
-## Exibição do medidor — 0.1.11 alpha
+## Exibição do medidor
 
-**Medidor de dano → Exibição** configura as barras e as janelas do futuro overlay. Padrões: eDPS, Combat Power ao lado do nome, dano total visível, DPS do grupo ligado, ocultar fora de combate após 15 s, timer de berserk ligado e resumo em uma linha. Nas janelas: fundo a 86%, foco desligado, botões Party/Todos e Grupo/DPS ocultos, nome da classe visível, nomes dos jogadores visíveis, escala de 90% e atualização a cada 150 ms.
+**Medidor de dano → Exibição** configura as barras e a janela do overlay. Padrões: eDPS, Combat Power ao lado do nome, dano total visível, DPS do grupo ligado, ocultar fora de combate após 15 s, timer de berserk ligado e resumo em uma linha. Nas janelas: fundo a 86%, foco desligado, botões Party/Todos e Grupo/DPS ocultos, nome da classe visível, nomes dos jogadores visíveis, escala de 90% e atualização a cada 150 ms.
 
-A opacidade permite 10–100%, escala 60–160%, atualização 50–500 ms e atraso para ocultar 1–300 s. eDPS considera a duração do encontro; aDPS considera o intervalo do primeiro ao último golpe de cada jogador. Exibir o botão Party/Todos não muda sozinho a opção de contar apenas você e o grupo. Os sliders aceitam teclado, as preferências são salvas automaticamente junto de Combate e os arquivos anteriores recebem padrões sem perder os valores existentes. Atalhos permanece para a próxima etapa. O overlay em tempo real ainda não está conectado.
+A opacidade permite 10–100%, escala 60–160%, atualização 50–500 ms e atraso para ocultar 1–300 s. eDPS considera a duração do encontro; aDPS considera o intervalo do primeiro ao último golpe de cada jogador. Exibir o botão Party/Todos não muda sozinho a opção de contar apenas você e o grupo. Os sliders aceitam teclado, as preferências são salvas automaticamente junto de Combate e os arquivos anteriores recebem padrões sem perder os valores existentes. Atalhos permanece para a próxima etapa.
 
-## Overlay de DPS e cura — 0.1.12 em validação local
+## Overlay de DPS e cura
 
 O overlay é uma janela independente, visível sobre o jogo mesmo com a janela principal minimizada. Alterne entre **DPS** e **Cura** no cabeçalho. Cada personagem mostra taxa, total e participação; invocações só são creditadas quando o jogo identifica o dono. A leitura usa o Npcap existente e as conexões pertencentes ao AION2.exe. Nenhum comando é enviado ao jogo e nenhum pacote bruto é gravado. A identificação para o combate vem da captura, não do personagem selecionado no Início.
 

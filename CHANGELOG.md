@@ -1,5 +1,24 @@
 # Histórico de mudanças
 
+## 0.1.19 alpha — Módulos, configurações e overlay
+
+### Overlay
+
+- Overlay com fundo cinza chumbo, controles neutros, destaques azuis e barras finas nas cores de classe.
+- Nome e CP/GS na mesma linha, ícone e classe próximos à identificação, valores de DPS/HPS e totais alinhados.
+- Disposição compacta em larguras menores, preservando identificação e rolagem; modos DPS, Cura e Grupo mantidos.
+- Preferências de escala, opacidade, foco, privacidade e colunas preservadas; aviso explícito para leitura parcial.
+- Brushes congelados reutilizados nas atualizações; sem mudanças no protocolo ou cálculo de combate.
+- 169 testes aprovados, verificações WPF de ações, modos e escalas, e nova conferência do desligamento pelo módulo.
+
+### Módulos e configurações
+
+- Módulos com estados explícitos, ícones, ações Abrir e Configurações diferenciadas e apresentação compatível com a nova tela inicial.
+- Combate e Exibição organizados em grupos com superfícies neutras, detalhes azuis e controles padronizados.
+- Componente compartilhado de configuração adapta campos, seletores e sliders a janelas estreitas sem reduzir os textos.
+- Preferências, validação dos campos, salvamento automático e ciclo de ativação dos módulos preservados.
+- 169 testes aprovados; verificações WPF de navegação, sete opções de Combate, dezesseis de Exibição, ativação/desativação, redimensionamento e raster de 150%.
+
 ## 0.1.18 alpha — Nova tela inicial
 
 - Banner com identificação, ícone de classe, retrato e carteira em regiões separadas, adaptando a disposição à largura da janela.
