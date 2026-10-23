@@ -1,6 +1,6 @@
 ﻿# Daeva Nexus
 
-O projeto foi refeito do zero e passa a se chamar **Daeva Nexus**. A versão atual é **0.1.17 alpha**, com tela Módulos para ativar/desativar o Medidor de dano e a Rotina do personagem, tema cinza chumbo e azul e overlay de DPS/cura com ícones de classe e Combat Power.
+O projeto foi refeito do zero e passa a se chamar **Daeva Nexus**. A versão atual é **0.1.18 alpha**, com nova tela inicial, banner do personagem, recursos compactos e rotina em linhas com filtros Tudo, Diário e Semanal. Inclui tela Módulos, tema cinza chumbo e azul e overlay de DPS/cura com ícones de classe e Combat Power.
 
 O menu **Início** reúne o cartão do personagem (nome, classe, nível e retrato) e a seção **Sua rotina**, com atividades diárias, semanais e recursos separados por personagem.
 
@@ -12,14 +12,14 @@ O banner principal também reúne Energia Odyle, tempo no Abismo, entradas de Pe
 
 O banner adapta nome, identificação, bordas e fundo à classe do personagem. Quando o serviço demora a entregar o retrato, há novas tentativas automáticas em 15, 30 e 60 segundos; depois o intervalo retorna a cinco minutos. A disponibilidade depende do serviço público. Uma atualização temporariamente sem imagem preserva o retrato do mesmo personagem, enquanto a troca de personagem limpa a imagem anterior.
 
-## Interface — 0.1.9 alpha
+## Interface — 0.1.18 alpha
 
-A tela inicial mescla as duas propostas: banner com retrato grande, saudação serifada e detalhes na cor da classe, acompanhado de cartões de rotina com valores em destaque. A carteira ocupa uma região própria no banner, sem texto sobre o rosto. O painel de recursos permanece separado e mostra personagem e última leitura. Leituras pendentes e atividades concluídas podem ser expandidas. A atualização continua na barra inferior. O seletor de personagens na barra superior atualiza o banner, o retrato, a cor da classe, a carteira, os recursos e a rotina. Cada personagem aparece individualmente. Consultar outro perfil não altera a identidade usada para capturar dados do jogo.
+A tela inicial usa Segoe UI e superfícies cinza neutras. O banner reúne nome, ícone e cor da classe, nível, servidor, retrato e carteira, com adaptação à largura da janela. Energia Odyle, tempo no Abismo e chaves do Shugo ficam em uma faixa de consulta rápida. Os demais recursos continuam disponíveis em Outros recursos. A rotina aparece em linhas alinhadas, com filtros Tudo, Diário e Semanal que afetam apenas essa lista. Leituras pendentes e atividades concluídas podem ser expandidas. A atualização continua na barra inferior. O seletor superior atualiza individualmente todos os dados apresentados do personagem; consultar outro perfil não altera a identidade usada para capturar dados do jogo. Saldos normais e bônus permanecem separados, e dados ausentes não são tratados como zero.
 
-Esta versão reúne as melhorias de interface desenvolvidas após a 0.1.4. O código-fonte completo, com testes e instruções de compilação, está no arquivo `DaevaNexus-Source-0.1.17.zip` na [release 0.1.17](https://github.com/skkarhub/Aion2Dps/releases/tag/v0.1.17-alpha.1).
+Esta versão reúne as melhorias de interface desenvolvidas após a 0.1.4. O código-fonte completo, com testes e instruções de compilação, está no arquivo `DaevaNexus-Source-0.1.18.zip` na [release 0.1.18](https://github.com/skkarhub/Aion2Dps/releases/tag/v0.1.18-alpha.1).
 ## Executar
 
-Baixe `DaevaNexus-Setup-0.1.17.exe` na seção Releases. O assistente permite escolher a pasta e criar um atalho na área de trabalho. O aplicativo aparece na lista de aplicativos instalados do Windows. O instalador é por usuário e não instala o Npcap automaticamente.
+Baixe `DaevaNexus-Setup-0.1.18.exe` na seção Releases. O assistente permite escolher a pasta e criar um atalho na área de trabalho. O aplicativo aparece na lista de aplicativos instalados do Windows. O instalador é por usuário e não instala o Npcap automaticamente.
 
 O app verifica atualizações ao abrir e a cada seis horas. Quando há uma versão nova, mostra um aviso e o botão **Atualizar**. Ao clicar, baixa o instalador, confere a assinatura do manifesto e o SHA-256 do arquivo, instala na pasta atual e reabre o aplicativo. O download pode ser cancelado. O perfil salvo é preservado, inclusive na desinstalação. As versões do antigo Aion2Dps são ignoradas.
 

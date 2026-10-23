@@ -1,5 +1,13 @@
 # Histórico de mudanças
 
+## 0.1.18 alpha — Nova tela inicial
+
+- Banner com identificação, ícone de classe, retrato e carteira em regiões separadas, adaptando a disposição à largura da janela.
+- Faixa de Energia Odyle, tempo no Abismo e chaves do Shugo. Demais recursos preservados em uma seção expansível, com personagem e última leitura próximos aos valores.
+- Rotina em linhas alinhadas e filtros Tudo, Diário e Semanal. O filtro não altera os saldos, a captura ou a identidade selecionada.
+- Estados de leitura pendente, zero, bônus, conclusão e ausência de entradas preservados.
+- 169 testes aprovados e verificações visuais de tamanhos, nomes longos, saldos grandes, retrato ausente, expansão e raster de 150%.
+
 ## 0.1.17 alpha — Estrutura visual do aplicativo
 
 - Barra superior com áreas separadas para marca, contexto, seleção de personagem e controles da janela.
