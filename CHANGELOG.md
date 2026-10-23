@@ -1,5 +1,15 @@
 # Histórico de mudanças
 
+## 0.1.21 alpha — Análise de combate (F02)
+
+- Tela Análise dentro do Medidor de dano: participante selecionado, resumo do encontro e alternância entre dano e cura. A seleção inicial usa o personagem capturado, separada do seletor do Início.
+- Detalhes por ID exato da habilidade: valor, participação, DPS/HPS, eventos observados e menor/média/maior evento. Variantes não são fundidas por semelhança de nome. Eventos não são apresentados como usos, acertos únicos, críticos ou overheal.
+- Catálogo local com nomes em português quando disponíveis e 359 ícones; identificação neutra para campos desconhecidos. Nenhum download é feito durante o combate.
+- Removidos os botões Mostrar/Ocultar overlay, Editar overlay e Reposicionar da barra lateral, junto com o bloco auxiliar. A abertura continua em Módulos e na Análise.
+- Clique em uma linha do overlay destravado abre a análise daquele personagem. Bloqueio, passagem de cliques e privacidade preservados.
+- Agregação limitada a 512 IDs por participante, com excedentes agrupados e aviso parcial, sem perder os valores já aceitos. Resultado atual/final em memória; histórico persistente pertence à F03.
+- 215 testes aprovados, incluindo a remontagem de mensagens até o detalhamento, reconciliação de valores, concorrência, invocações, homônimos e ciclo do módulo. Validações WPF de análise, Módulos e overlay aprovadas, sem erros de binding. Conferência ao vivo da party ainda pendente. 
+
 ## 0.1.20 alpha — Confiabilidade da leitura de combate
 
 - Leitura estrutural e limitada das mensagens de party/aliança, incluindo lista completa, entrada, reconexão, troca de líder, saída e dissolução. Lista do recrutador não concede participação no grupo.
