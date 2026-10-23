@@ -1,6 +1,6 @@
 # Daeva Nexus
 
-O projeto foi refeito do zero e passa a se chamar **Daeva Nexus**. A versão atual é **0.1.23 alpha**, com Eventos e notificações, rotina sempre ativa e abas de Análise, Combate e Exibição dentro do Medidor de dano. Mantém Módulos, configurações e overlay em cinza chumbo e azul. Inclui tela inicial com recursos compactos e rotina em linhas, ícones de classe e Combat Power no overlay.
+O projeto foi refeito do zero e passa a se chamar **Daeva Nexus**. A versão atual é **0.1.24 alpha**, com Chefes de campo, Eventos e notificações, rotina sempre ativa e abas de Análise, Combate e Exibição dentro do Medidor de dano. Mantém Módulos, configurações e overlay em cinza chumbo e azul. Inclui tela inicial com recursos compactos e rotina em linhas, ícones de classe e Combat Power no overlay.
 
 O menu **Início** reúne o cartão do personagem (nome, classe, nível e retrato) e a seção **Sua rotina**, com atividades diárias, semanais e recursos separados por personagem.
 
@@ -25,6 +25,12 @@ Mudanças de mapa invalidam os IDs temporários e preservam o resultado encerrad
 A tela inicial usa Segoe UI e superfícies cinza neutras. O banner reúne nome, ícone e cor da classe, nível, servidor, retrato e carteira, com adaptação à largura da janela. Energia Odyle, tempo no Abismo e chaves do Shugo ficam em uma faixa de consulta rápida. Os demais recursos continuam disponíveis em Outros recursos. A rotina aparece em linhas alinhadas, com filtros Tudo, Diário e Semanal que afetam apenas essa lista. Leituras pendentes e atividades concluídas podem ser expandidas. A atualização continua na barra inferior. O seletor superior atualiza individualmente todos os dados apresentados do personagem; consultar outro perfil não altera a identidade usada para capturar dados do jogo. Saldos normais e bônus permanecem separados, e dados ausentes não são tratados como zero.
 
 Módulos apresenta o Medidor de dano como função opcional, com estado explícito e ações Abrir/Configurações. Rotina, recursos e saldos do personagem permanecem sempre ativos, mesmo com o medidor desativado. A preferência antiga que desligava a rotina é ignorada sem apagar os dados anteriores. Combate e Exibição organizam as opções em grupos; os editores passam para baixo das descrições em janelas estreitas. O overlay mantém nome e CP/GS na mesma linha, ícone e classe próximos, valores alinhados e barras finas nas cores de classe. Em larguras menores, os valores passam para uma segunda linha. Escala, opacidade, foco, privacidade e leitura parcial permanecem disponíveis. Os 205 testes passaram, junto das verificações WPF de controles, modos, módulos e redimensionamento; não houve nova validação ao vivo em party nesta alteração. Esta versão reúne as melhorias de interface desenvolvidas após a 0.1.4. O código-fonte completo, com testes e instruções de compilação, está no arquivo `DaevaNexus-Source-0.1.22.zip` na [release 0.1.22](https://github.com/skkarhub/Aion2Dps/releases/tag/v0.1.22-alpha.1).
+## Chefes de campo (F08)
+
+O aplicativo lê a lista de monstros de campo consultada no mapa do jogo e mostra estado, retorno informado e última consulta, separados por região e servidor. Inclui seleção de chefes, antecedência, avisos Windows/janela, som opcional e teste, controlados pelo novo módulo Chefes de campo. O Gartua Imortal, em Altgard, foi comparado ao vivo com o jogo; 256 testes e verificações WPF passaram. Instalador e projeto completo na [release 0.1.24](https://github.com/skkarhub/Aion2Dps/releases/tag/v0.1.24-alpha.1).
+
+O canal não foi identificado. Consulte novamente a lista após trocar de canal, mapa ou servidor. Após cinco minutos sem atualização, os dados viram histórico e deixam de gerar alertas; para retornos distantes, mantenha a lista aberta ou consulte-a novamente perto do prazo. O fim do timer não confirma que o chefe nasceu. Observações, preferências e claims ficam em `%LOCALAPPDATA%/DaevaNexus/field-bosses.json`. Não há cadastro manual nem compartilhamento de timers. Fontes e limites estão em `docs/field-bosses-research.json` e `docs/field-bosses-validation.json`.
+
 ## Executar
 
 ### Eventos e notificações (F07)
@@ -35,7 +41,7 @@ Os horários são calculados a partir de um catálogo embarcado, sem cadastro ma
 
 ### Versão publicada
 
-Baixe `DaevaNexus-Setup-0.1.23.exe` na seção Releases. O assistente permite escolher a pasta e criar um atalho na área de trabalho. O aplicativo aparece na lista de aplicativos instalados do Windows. O instalador é por usuário e não instala o Npcap automaticamente.
+Baixe `DaevaNexus-Setup-0.1.24.exe` na seção Releases. O assistente permite escolher a pasta e criar um atalho na área de trabalho. O aplicativo aparece na lista de aplicativos instalados do Windows. O instalador é por usuário e não instala o Npcap automaticamente.
 
 O app verifica atualizações ao abrir e a cada seis horas. Quando há uma versão nova, mostra um aviso e o botão **Atualizar**. Ao clicar, baixa o instalador, confere a assinatura do manifesto e o SHA-256 do arquivo, instala na pasta atual e reabre o aplicativo. O download pode ser cancelado. O perfil salvo é preservado, inclusive na desinstalação. As versões do antigo Aion2Dps são ignoradas.
 

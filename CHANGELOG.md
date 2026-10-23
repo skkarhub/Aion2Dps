@@ -1,5 +1,13 @@
 # Histórico de mudanças
 
+## 0.1.24 alpha — Chefes de campo (F08)
+
+- Tela com regiões, servidor observado, estados e retornos informados pelo jogo. Leitura direta da lista de monstros de campo, sem cadastro manual ou agenda de respawn presumida.
+- Avisos por chefe com antecedência, Windows, janela sobreposta, som opcional e teste. Novo módulo independente, preservando preferências e observações ao desligar.
+- Listas fora de ordem resolvidas pelo número do chefe; entradas incompletas, duplicadas, conexões antigas e regiões sem vínculo confirmado são rejeitadas. Leituras vencidas são históricas; timer encerrado aguarda nova consulta.
+- 256 testes aprovados, verificações WPF e comparação ao vivo do Gartua Imortal em Altgard: cerca de 2h56 para o retorno, compatível com o jogo. Outras regiões ainda não conferidas ao vivo. Canal não identificado; consulta recente exigida para avisos.
+- Fontes, comparação ao vivo e limites em docs/field-bosses-research.json e docs/field-bosses-validation.json.
+
 ## 0.1.23 alpha — Eventos e notificações (F07)
 
 - Tela Eventos com agenda prevista da América do Sul: Festival Shugo, Invasão Dimensional, Fenda do Espaço-Tempo e resets diário/semanal. Próximos horários em Brasília e contagem automática, sem cadastro manual.
