@@ -1,5 +1,13 @@
 # Histórico de mudanças
 
+## 0.1.17 alpha — Estrutura visual do aplicativo
+
+- Barra superior com áreas separadas para marca, contexto, seleção de personagem e controles da janela.
+- Menu lateral com grupos, indicador azul da página selecionada e adaptação à largura da janela.
+- Fundos neutros em cinza chumbo, bordas discretas e conteúdo centralizado em monitores largos.
+- Seleção de personagens, configurações, módulos e atualização automática preservados. Banner e rotina serão reformulados em uma próxima etapa.
+- 167 testes aprovados; navegação, isolamento dos personagens, rolagem e renderização em diferentes tamanhos conferidos.
+
 ## 0.1.16 alpha — Tela Módulos
 
 - Novo item Módulos com cartões de Medidor de dano e Rotina do personagem, sem funções ainda não implementadas.
