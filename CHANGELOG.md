@@ -1,5 +1,13 @@
 # Histórico de mudanças
 
+## 0.1.25 alpha — Dano final e histórico (F03)
+
+- Abas Dano final e Histórico dentro do Medidor de dano: ranking de dano/cura, taxas preservadas, seleção de personagem e habilidades do encontro encerrado.
+- Histórico local versionado, um arquivo por combate, com reabertura após reiniciar, filtros por personagem/servidor, data de Brasília e alvo, além de resumo copiável que respeita a privacidade visual.
+- Encerramento, inatividade, reset, filtro, mapa, personagem, desativação e fechamento normal preservam resultados aceitos. O fechamento durante uma luta é identificado como parcial.
+- Gravação em segundo plano com rename atômico, tentativas após falha, fila limitada e aviso explícito. Retenção de até 200 encontros, 90 dias ou 128 MiB; arquivos inconsistentes são preservados e não exibidos como válidos.
+- 273 testes aprovados; verificações WPF de histórico, análise ao vivo e Módulos sem erros de binding. Captura real solo confirmou dois registros e reabertura idêntica, incluindo 3.426.360 de dano no espantalho; outro resultado foi marcado como parcial. Party ainda não validada.
+
 ## 0.1.24 alpha — Chefes de campo (F08)
 
 - Tela com regiões, servidor observado, estados e retornos informados pelo jogo. Leitura direta da lista de monstros de campo, sem cadastro manual ou agenda de respawn presumida.

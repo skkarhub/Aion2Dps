@@ -1,6 +1,6 @@
 # Daeva Nexus
 
-O projeto foi refeito do zero e passa a se chamar **Daeva Nexus**. A versão atual é **0.1.24 alpha**, com Chefes de campo, Eventos e notificações, rotina sempre ativa e abas de Análise, Combate e Exibição dentro do Medidor de dano. Mantém Módulos, configurações e overlay em cinza chumbo e azul. Inclui tela inicial com recursos compactos e rotina em linhas, ícones de classe e Combat Power no overlay.
+O projeto foi refeito do zero e passa a se chamar **Daeva Nexus**. A versão atual é **0.1.25 alpha**, com Dano final e Histórico, Chefes de campo, Eventos e notificações, rotina sempre ativa e abas de Análise, Dano final, Histórico, Combate e Exibição dentro do Medidor de dano. Mantém Módulos, configurações e overlay em cinza chumbo e azul. Inclui tela inicial com recursos compactos e rotina em linhas, ícones de classe e Combat Power no overlay.
 
 O menu **Início** reúne o cartão do personagem (nome, classe, nível e retrato) e a seção **Sua rotina**, com atividades diárias, semanais e recursos separados por personagem.
 
@@ -30,6 +30,14 @@ Módulos apresenta o Medidor de dano como função opcional, com estado explíci
 O aplicativo lê a lista de monstros de campo consultada no mapa do jogo e mostra estado, retorno informado e última consulta, separados por região e servidor. Inclui seleção de chefes, antecedência, avisos Windows/janela, som opcional e teste, controlados pelo novo módulo Chefes de campo. O Gartua Imortal, em Altgard, foi comparado ao vivo com o jogo; 256 testes e verificações WPF passaram. Instalador e projeto completo na [release 0.1.24](https://github.com/skkarhub/Aion2Dps/releases/tag/v0.1.24-alpha.1).
 
 O canal não foi identificado. Consulte novamente a lista após trocar de canal, mapa ou servidor. Após cinco minutos sem atualização, os dados viram histórico e deixam de gerar alertas; para retornos distantes, mantenha a lista aberta ou consulte-a novamente perto do prazo. O fim do timer não confirma que o chefe nasceu. Observações, preferências e claims ficam em `%LOCALAPPDATA%/DaevaNexus/field-bosses.json`. Não há cadastro manual nem compartilhamento de timers. Fontes e limites estão em `docs/field-bosses-research.json` e `docs/field-bosses-validation.json`.
+
+## Dano final e histórico (F03)
+
+A versão 0.1.25 acrescenta Dano final e Histórico dentro do Medidor de dano. Os encontros encerrados preservam ranking de dano/cura, taxas calculadas no encerramento e habilidades de cada personagem. O histórico pode ser reaberto depois de reiniciar, filtrado por personagem e servidor de origem, período no calendário de Brasília e alvo. Consultar os resultados não altera o combate atual. O resumo copiável respeita a opção de ocultar nomes dos outros jogadores.
+
+Os arquivos ficam apenas neste PC, em `%LOCALAPPDATA%/DaevaNexus/combat-history`, e incluem identidades e estatísticas normalizadas, sem pacotes, endereços de rede ou IDs transitórios. A privacidade visual não anonimiza os arquivos. São mantidos até 200 encontros, por até 90 dias, respeitando 128 MiB de arquivos válidos; os mais antigos são removidos ao salvar novos. Dados inválidos são preservados com aviso. Falha de disco mantém tentativas enquanto o app estiver aberto; término abrupto pode perder pendentes. Agrupamento por DG e gráficos pertencem à próxima etapa.
+
+273 testes passaram, com verificações WPF do histórico, análise ao vivo e Módulos. O teste real solo confirmou o encerramento e a reabertura de dois combates com valores preservados; um deles foi marcado como parcial. Party ainda não validada. Instalador e código-fonte completo na [release 0.1.25](https://github.com/skkarhub/Aion2Dps/releases/tag/v0.1.25-alpha.1). Arquitetura e validação em `docs/combat-history-design.json` e `docs/combat-history-validation.json`.
 
 ## Executar
 
