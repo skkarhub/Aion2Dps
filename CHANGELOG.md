@@ -1,5 +1,13 @@
 # Histórico de mudanças
 
+## 0.1.26 alpha — Medidor de dano: primeira entrega de interface
+
+- Combate e Histórico como abas principais; regras e exibição acessíveis pelo botão Configurações. Removidas as abas separadas Análise, Dano final e Atalhos indisponível.
+- Contexto, totais e ranking compacto de dano/cura no centro da tela. Selecionar uma linha apresenta as habilidades daquele participante; o personagem local é selecionado inicialmente em cada encontro.
+- O resultado encerrado permanece na mesma tela, com taxas congeladas. Nova medição preserva o último resultado até o próximo combate; o histórico usa a mesma apresentação e mantém isolamento da medição atual.
+- Catálogo e filtros ao lado do resultado em janelas largas, com reorganização na janela mínima. Privacidade, cópia e avisos de falha preservados.
+- 273 testes aprovados, verificações WPF de interações, análise/overlay e Módulos sem erros de binding. Layout renderizado em janela mínima, padrão, larga e escala de 150%. Sem nova validação ao vivo nesta alteração de interface. Overlay e simplificação das opções ficam para as entregas seguintes.
+
 ## 0.1.25 alpha — Dano final e histórico (F03)
 
 - Abas Dano final e Histórico dentro do Medidor de dano: ranking de dano/cura, taxas preservadas, seleção de personagem e habilidades do encontro encerrado.
