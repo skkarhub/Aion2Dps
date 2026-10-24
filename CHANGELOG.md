@@ -1,5 +1,27 @@
 # Histórico de mudanças
 
+## 0.1.27-alpha.1 — 2026-10-24
+
+### Overlay compacto e detalhes de habilidades
+
+- Aproximado à nova referência: cabeçalho em duas linhas, DPS/HPS em azul e barras independentes de 24 px com ícone, nome, taxa, participação e total. Área externa transparente; CP/GS junto do nome na linha de cada jogador, conforme a configuração; classe no ícone e tooltip. Novo tamanho inicial 320x190, preservando dimensões salvas.
+
+- Cabeçalho único com DPS/Cura, arraste, menu de ações, travar e ocultar. Barras proporcionais integradas às linhas, ícones de classe, CP/GS e marcador do personagem local.
+- Clique no jogador abre habilidades em painel lateral; troca de modo acompanha dano/cura. Ver no aplicativo abre a análise completa explicitamente.
+- Menu com cópia, nova medição e ações opcionais de grupo/escopo. Modos preservam o escopo atual. Descrições das opções de menu atualizadas.
+- Fade de 120 ms na auto-ocultação, com passagem de cliques aplicada imediatamente. Menus/painéis fecham ao travar, ocultar, desligar ou mudar configurações. Mostrar overlay recupera os controles e destrava a janela.
+- Dimensões e posição existentes preservadas. Reflow em largura reduzida e escalas de 60/90/160% conferidos.
+- 273 testes aprovados e verificações WPF com controles carregados, detalhes, menu, privacidade, ações, escala, click-through e regressões. Sem nova comparação de combate ao vivo nesta etapa.
+
+### Acabamento dos componentes do medidor
+
+- Resumo sem cartões contornados, números tabulares, ações/cabeçalhos de 32 px e linhas de 36 px. Estado inicial contextual sem tabelas vazias.
+- Tabelas dimensionadas pelo conteúdo; estatísticas secundárias e interpretação da leitura em seção expansível. Avisos de leitura parcial preservados.
+- Base visual própria e compartilhada por Combate e Histórico: botões, seletores, filtro, tabelas e navegação do medidor.
+- Feedback de cor de 150 ms em controles e linhas, com estados de seleção, clique, teclado e desativação. Respeita a preferência de animações do Windows e interrompe/remove relógios ao desativar/descarregar.
+- Corrigida uma inconsistência intermitente da tabela durante trocas rápidas de histórico: membros das listas agora são publicados atomicamente, preservando os objetos das linhas quando possível. Conferidas 20 trocas rápidas com alternância de dano/cura.
+- 273 testes aprovados e verificações WPF de interação, controles carregados, análise, overlay e Módulos. Sem nova comparação de combate ao vivo. Publicação e novo layout do overlay permanecem para aprovação separada.
+
 ## 0.1.26 alpha — Medidor de dano: primeira entrega de interface
 
 - Combate e Histórico como abas principais; regras e exibição acessíveis pelo botão Configurações. Removidas as abas separadas Análise, Dano final e Atalhos indisponível.
